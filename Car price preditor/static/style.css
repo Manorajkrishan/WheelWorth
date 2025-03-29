@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: rgb(11, 52, 71);
+    padding: 0;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100vw; 
+    height: 100vh; 
+    background: #fff;
+    margin: 0 auto;
+    box-shadow: 2px 2px 8px rgba(214, 18, 18, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.left {
+    flex: 1;
+    background: #f4f4f4;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.left .car-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+.right {
+    flex: 1;
+    padding: 30px;
+    height: 100%;
+    overflow-y: auto; 
+    padding-top: 0px;
+}
+
+
+
+.right .title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #0b3447; 
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.5px;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0;
+}
+
+
+
+.form .inputfield {
+    margin-bottom: 20px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.form .inputfield label {
+    color: #0b3447;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700; 
+}
+
+.form .inputfield .input,
+.form .inputfield select {
+    width: 100%;
+    outline: none;
+    border: 1px solid #ccc; 
+    font-size: 15px;
+    padding: 12px; 
+    border-radius: 6px; 
+    transition: all 0.3s ease;
+}
+
+.form .inputfield .input:focus,
+.form .inputfield select:focus {
+    border-color: #0b3447; 
+    box-shadow: 0 0 5px rgba(11, 52, 71, 0.2); 
+}
+
+.form .inputfield select {
+    appearance: none; 
+    background-color: #f8f8f8;
+    padding-right: 30px; 
+}
+
+.form .inputfield select:focus {
+    outline: none; 
+}
+
+.form .inputfield .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    background: #0b3447;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.form .inputfield .btn:hover {
+    background: #093041;
+}
+
+.result p {
+    text-align: center;
+    color: rgb(5, 33, 59);
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.inputfield-group {
+    display: flex;
+    gap: 20px; 
+}
+
+.inputfield {
+    flex: 1; 
+}
+
+.custom_select select {
+    width: 100%; 
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    .left, .right {
+        padding: 20px;
+        height: auto; 
+    }
+
+    .right {
+        overflow-y: auto; 
+    }
+}
+
+.right {
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f4f4f4; 
+}
+
+.right::-webkit-scrollbar {
+    width: 6px; 
+}
+
+.right::-webkit-scrollbar-track {
+    background: #f4f4f4; 
+}
+
+.right::-webkit-scrollbar-thumb {
+    background-color: #ccc; 
+    border-radius: 10px; 
+}
